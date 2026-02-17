@@ -3,7 +3,7 @@ import { NestFactory } from '@nestjs/core';
 import { ValidationPipe } from '@nestjs/common';
 import { ExpressAdapter } from '@nestjs/platform-express';
 import { AppModule } from '../src/app.module';
-// eslint-disable-next-line @typescript-eslint/no-var-requires
+
 const express = require('express');
 
 const server = express();

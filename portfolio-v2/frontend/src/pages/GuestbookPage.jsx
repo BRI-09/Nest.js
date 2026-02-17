@@ -95,19 +95,11 @@ export default function GuestbookPage() {
           Leave a message, say hi, or share a thought. All entries are stored in
           <strong> Supabase</strong> via the <code>NestJS REST API</code>.
         </p>
-
-        {/* API badge strip */}
-        <div className={styles.badges}>
-          <span className={`${styles.badge} ${styles.get}`}>GET /api/guestbook</span>
-          <span className={`${styles.badge} ${styles.post}`}>POST /api/guestbook</span>
-          <span className={`${styles.badge} ${styles.put}`}>PUT /api/guestbook/:id</span>
-          <span className={`${styles.badge} ${styles.del}`}>DELETE /api/guestbook/:id</span>
-        </div>
       </div>
 
       {/* ── SIGN FORM ── */}
       <section className={styles.formSection}>
-        <h2 className={styles.formTitle}> Sign in the Guestbook</h2>
+        <h2 className={styles.formTitle}>✍ Sign the Guestbook</h2>
         <form className={styles.form} onSubmit={handleSign} noValidate>
           <div className={styles.row}>
             <div className="field" style={{ flex: 1 }}>
@@ -167,7 +159,7 @@ export default function GuestbookPage() {
 
         {!loading && !error && entries.length === 0 && (
           <div className={styles.empty}>
-            <span>🌚</span>
+            <span>🌸</span>
             <p>No entries yet — be the first to sign!</p>
           </div>
         )}
@@ -200,7 +192,7 @@ export default function GuestbookPage() {
                 /* ── Read mode ── */
                 <>
                   <div className={styles.entryTop}>
-                    <span className={styles.entryEmoji}>{entry.emoji || '😻'}</span>
+                    <span className={styles.entryEmoji}>{entry.emoji || '👋'}</span>
                     <div>
                       <strong className={styles.entryName}>{entry.name}</strong>
                       <time className={styles.entryDate}>{fmt(entry.created_at)}</time>
