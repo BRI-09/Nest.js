@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { fetchGuestbook, createGuestbook, updateGuestbook, deleteGuestbook } from '../api';
 import styles from './GuestbookPage.module.css';
 
-const EMOJIS = ['👋','🐱','💜','🌸','🔥','✨','🎮','☕','🌙','🦋'];
+const EMOJIS = ['😻','🐱','💜','🌚','😹','🥹','🎮','☕','🙂‍↔️','💩'];
 
 const EMPTY_FORM = { name: '', message: '', emoji: '👋' };
 
@@ -107,7 +107,7 @@ export default function GuestbookPage() {
 
       {/* ── SIGN FORM ── */}
       <section className={styles.formSection}>
-        <h2 className={styles.formTitle}>✍ Sign the Guestbook</h2>
+        <h2 className={styles.formTitle}> Sign in the Guestbook</h2>
         <form className={styles.form} onSubmit={handleSign} noValidate>
           <div className={styles.row}>
             <div className="field" style={{ flex: 1 }}>
@@ -167,7 +167,7 @@ export default function GuestbookPage() {
 
         {!loading && !error && entries.length === 0 && (
           <div className={styles.empty}>
-            <span>🌸</span>
+            <span>🌚</span>
             <p>No entries yet — be the first to sign!</p>
           </div>
         )}
@@ -200,7 +200,7 @@ export default function GuestbookPage() {
                 /* ── Read mode ── */
                 <>
                   <div className={styles.entryTop}>
-                    <span className={styles.entryEmoji}>{entry.emoji || '👋'}</span>
+                    <span className={styles.entryEmoji}>{entry.emoji || '😻'}</span>
                     <div>
                       <strong className={styles.entryName}>{entry.name}</strong>
                       <time className={styles.entryDate}>{fmt(entry.created_at)}</time>

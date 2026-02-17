@@ -1,3 +1,4 @@
+import 'reflect-metadata';
 import { NestFactory } from '@nestjs/core';
 import { ValidationPipe } from '@nestjs/common';
 import { ExpressAdapter } from '@nestjs/platform-express';
@@ -5,25 +6,44 @@ import { AppModule } from '../src/app.module';
 import * as express from 'express';
 
 const server = express();
-let app: any;
+let isReady = false;
 
 async function bootstrap() {
-  if (!app) {
+  if (!isReady) {
     const adapter = new ExpressAdapter(server);
-    app = await NestFactory.create(AppModule, adapter, { logger: false });
-    app.enableCors({
-      origin: process.env.FRONTEND_URL || '*',
-      methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-      allowedHeaders: ['Content-Type', 'Authorization'],
+    const app = await NestFactory.create(AppModule, adapter, {
+      logger: ['error', 'warn'],
     });
-    app.useGlobalPipes(new ValidationPipe({ whitelist: true, transform: true }));
+
+    app.enableCors({
+      origin: '*',
+      methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
+      allowedHeaders: 'Content-Type, Accept, Authorization',
+      preflightContinue: false,
+      optionsSuccessStatus: 204,
+    });
+
+    app.useGlobalPipes(
+      new ValidationPipe({
+        whitelist: true,
+        transform: true,
+        forbidNonWhitelisted: false,
+      }),
+    );
+
     app.setGlobalPrefix('api');
     await app.init();
+    isReady = true;
   }
   return server;
 }
 
-export default async (req: any, res: any) => {
-  const expressApp = await bootstrap();
-  expressApp(req, res);
+module.exports = async (req: any, res: any) => {
+  try {
+    const expressApp = await bootstrap();
+    expressApp(req, res);
+  } catch (err) {
+    console.error('Bootstrap error:', err);
+    res.status(500).json({ error: 'Internal server error', details: err.message });
+  }
 };

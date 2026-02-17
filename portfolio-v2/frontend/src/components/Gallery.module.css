@@ -25,11 +25,11 @@
 .arr {
   position:absolute; top:50%; transform:translateY(-50%);
   width:38px; height:38px; border-radius:50%;
-  background: rgba(13,17,23,0.75); color:#fff; font-size:20px;
+  background: rgba(19,13,34,0.75); color:#fff; font-size:20px;
   border: 1px solid var(--border);
   display:grid; place-items:center; transition:all 0.2s ease; z-index:5;
 }
-.arr:hover { background:var(--sky); color:#000; transform:translateY(-50%) scale(1.1); }
+.arr:hover { background:var(--rose); color:#fff; transform:translateY(-50%) scale(1.1); }
 .prev { left:10px; }
 .next { right:10px; }
 
@@ -39,12 +39,12 @@
   background:rgba(255,255,255,0.15); border:none;
   transition:all 0.2s ease; padding:0; cursor:pointer;
 }
-.dotActive { background:var(--sky); width:20px; border-radius:10px; }
+.dotActive { background:var(--rose); width:20px; border-radius:10px; }
 
 .thumbs {
   display:flex; flex-direction:column; gap:8px;
   max-height:400px; overflow-y:auto;
-  scrollbar-width:thin; scrollbar-color:var(--sky) transparent;
+  scrollbar-width:thin; scrollbar-color:var(--rose) transparent;
 }
 .thumb {
   border: 2px solid transparent; border-radius:8px;
@@ -52,7 +52,7 @@
   padding:0; background:none; cursor:pointer;
 }
 .thumb img { width:100%; height:68px; object-fit:cover; }
-.thumbActive { border-color:var(--sky); opacity:1; }
+.thumbActive { border-color:var(--rose); opacity:1; }
 
 .center { display:flex; justify-content:center; padding:48px; }
 

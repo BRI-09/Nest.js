@@ -3,9 +3,9 @@ import { fetchSkills } from '../api';
 import styles from './Skills.module.css';
 
 const LEVEL_STYLE = {
-  beginner:     { color:'#58a6ff', bg:'rgba(88,166,255,0.1)'  },
-  intermediate: { color:'#3fb950', bg:'rgba(63,185,80,0.1)'   },
-  advanced:     { color:'#f0883e', bg:'rgba(240,136,62,0.1)'  },
+  beginner:     { color:'#a78bfa', bg:'rgba(167,139,250,0.1)'  },
+  intermediate: { color:'#c4b5fd', bg:'rgba(196,181,253,0.12)' },
+  advanced:     { color:'#ddd6fe', bg:'rgba(221,214,254,0.14)' },
 };
 
 export default function Skills() {

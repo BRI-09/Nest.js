@@ -1,6 +1,6 @@
 .nav {
   position: sticky; top: 0; z-index: 100;
-  background: rgba(13,17,23,0.88);
+  background: rgba(19,13,34,0.88);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border);
 }
@@ -18,10 +18,10 @@
 .logo {
   font-family: var(--font-display);
   font-weight: 900; font-size: 20px;
-  color: var(--text);
+  color: var(--accent-strong);
   letter-spacing: -0.01em;
 }
-.logo span { color: var(--sky); }
+.logo span { color: var(--rose); }
 
 .links {
   list-style: none;
@@ -38,15 +38,15 @@
 }
 .links a:hover { color: var(--text); background: rgba(255,255,255,0.05); }
 
-.active { color: var(--text) !important; }
+.active { color: var(--accent-strong) !important; }
 
 .gbLink {
-  background: rgba(88,166,255,0.08);
-  border: 1px solid rgba(88,166,255,0.2);
-  color: var(--sky) !important;
+  background: rgba(139,92,246,0.1) !important;
+  border: 1px solid rgba(139,92,246,0.3) !important;
+  color: var(--rose) !important;
 }
-.gbLink:hover { background: rgba(88,166,255,0.15) !important; }
-.gbLink.active { background: rgba(88,166,255,0.15) !important; }
+.gbLink:hover { background: rgba(139,92,246,0.2) !important; }
+.gbLink.active { background: rgba(139,92,246,0.2) !important; }
 
 @media (max-width: 600px) {
   .links { gap: 2px; }
