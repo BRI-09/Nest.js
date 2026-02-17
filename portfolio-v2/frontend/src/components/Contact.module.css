@@ -1,0 +1,17 @@
+.layout {
+  display: grid; grid-template-columns: 1fr 1.5fr; gap: 28px;
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 32px;
+}
+.info { display:flex; flex-direction:column; gap:14px; padding-right:24px; border-right:1px solid var(--border); }
+.detail { display:flex; align-items:center; gap:10px; font-size:14px; }
+.detail a:hover { color:var(--sky); }
+.apiTag code {
+  font-size:12px; font-family:monospace;
+  background:rgba(88,166,255,0.08); color:var(--sky);
+  border:1px solid rgba(88,166,255,0.25);
+  padding:4px 10px; border-radius:4px;
+}
+.form { display:flex; flex-direction:column; gap:14px; }
+
+@media (max-width:700px) { .layout { grid-template-columns:1fr; } .info { padding-right:0; border-right:none; border-bottom:1px solid var(--border); padding-bottom:20px; } }

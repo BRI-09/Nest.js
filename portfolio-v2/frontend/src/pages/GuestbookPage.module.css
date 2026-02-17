@@ -1,0 +1,158 @@
+.header { margin-bottom: 36px; }
+
+.title {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(36px, 6vw, 64px);
+  letter-spacing: -0.03em;
+  color: var(--text);
+  margin-bottom: 10px;
+  line-height: 1;
+}
+
+.sub {
+  color: var(--text-muted);
+  font-size: 15px;
+  max-width: 560px;
+  margin-bottom: 18px;
+}
+.sub strong { color: var(--text); }
+.sub code {
+  font-size: 13px;
+  background: rgba(88,166,255,0.1);
+  color: var(--sky);
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+/* API method badges */
+.badges { display: flex; flex-wrap: wrap; gap: 8px; }
+.badge {
+  font-size: 11px; font-weight: 700; font-family: monospace;
+  padding: 4px 10px; border-radius: 4px;
+  border: 1px solid;
+}
+.get  { color: #3fb950; border-color: rgba(63,185,80,0.4);  background: rgba(63,185,80,0.08);  }
+.post { color: var(--sky); border-color: rgba(88,166,255,0.4); background: rgba(88,166,255,0.08); }
+.put  { color: var(--amber); border-color: rgba(240,136,62,0.4); background: rgba(240,136,62,0.08); }
+.del  { color: #f85149; border-color: rgba(248,81,73,0.4);  background: rgba(248,81,73,0.08);  }
+
+/* ── Sign Form ── */
+.formSection {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  margin-bottom: 40px;
+}
+
+.formTitle {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--text);
+  margin-bottom: 20px;
+}
+
+.form { display: flex; flex-direction: column; gap: 16px; }
+
+.row { display: flex; gap: 16px; align-items: flex-start; flex-wrap: wrap; }
+.row > .field:first-child { flex: 1; min-width: 200px; }
+
+/* Emoji picker */
+.emojiPicker {
+  display: flex; flex-wrap: wrap; gap: 6px;
+}
+.emojiBtn {
+  width: 36px; height: 36px; border-radius: 8px;
+  font-size: 18px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  transition: all 0.15s ease;
+  display: grid; place-items: center;
+}
+.emojiBtn:hover { background: rgba(255,255,255,0.08); border-color: var(--border-hover); }
+.emojiActive {
+  background: rgba(88,166,255,0.15) !important;
+  border-color: var(--sky) !important;
+  box-shadow: 0 0 0 2px var(--sky-glow);
+}
+
+.charCount { font-size: 11px; color: var(--text-dim); text-align: right; }
+
+/* ── Entries ── */
+.entries { }
+
+.list { display: flex; flex-direction: column; gap: 12px; margin-top: 16px; }
+
+.entry {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 18px;
+  animation: fadeUp 0.4s ease both;
+  transition: border-color 0.2s ease;
+}
+.entry:hover { border-color: var(--border-hover); }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.entryTop {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.entryEmoji { font-size: 26px; }
+.entryName {
+  display: block;
+  font-size: 15px;
+  color: var(--text);
+}
+.entryDate {
+  display: block;
+  font-size: 11px;
+  color: var(--text-dim);
+}
+
+.entryActions {
+  margin-left: auto;
+  display: flex;
+  gap: 8px;
+}
+
+.entryMsg { color: var(--text-muted); font-size: 14px; line-height: 1.6; }
+.edited   { font-size: 11px; color: var(--text-dim); display: block; margin-top: 8px; }
+
+/* Edit mode */
+.editMode { display: flex; flex-direction: column; gap: 10px; }
+.editArea {
+  width: 100%;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--sky);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 14px;
+  resize: vertical;
+}
+.editArea:focus { outline: none; }
+.editActions { display: flex; gap: 8px; }
+
+/* Empty state */
+.empty {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--text-muted);
+}
+.empty span { font-size: 48px; display: block; margin-bottom: 12px; }
+
+@media (max-width: 600px) {
+  .formSection { padding: 18px; }
+  .entryActions { flex-direction: column; gap: 4px; }
+}
