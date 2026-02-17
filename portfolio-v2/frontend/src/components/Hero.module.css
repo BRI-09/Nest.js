@@ -88,7 +88,9 @@
   animation: fadeUp 0.55s 0.1s ease both;
 }
 .frame {
-  width: 200%; aspect-ratio: 3/4;
+  width: 80%;
+  height: 280px;
+  aspect-ratio: unset;
   border-radius: var(--radius-md); overflow: hidden;
   border: 1px solid var(--border);
   background: var(--bg-panel);
