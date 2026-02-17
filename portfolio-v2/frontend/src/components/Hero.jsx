@@ -16,13 +16,13 @@ export default function Hero() {
             <em>Ananayo</em>
           </h1>
           <div className={styles.pills}>
-            <span>🐱 Cat Lover</span>
+            <span>🐱 Wants s Cat</span>
             <span>💻 CS Student</span>
             <span>☕ Caffeinated Coder</span>
           </div>
           <div className={styles.cta}>
             <a href="#contact" className="btn">Get in Touch</a>
-            <Link to="/guestbook" className={`btn ${styles.gbBtn}`}>✍ Sign Guestbook</Link>
+            <Link to="/guestbook" className={`btn ${styles.gbBtn}`}> Sign in the Guestbook</Link>
             <a href="#skills" className={`btn btn-outline ${styles.outlineBtn}`}>My Skills →</a>
           </div>
         </div>
@@ -32,7 +32,7 @@ export default function Hero() {
             <img src="/assets/myself3.jpg" alt="Breneth Ananayo" />
           </div>
           <div className={styles.badge}>
-            <span>🎓</span>
+            <span>🏫</span>
             <div>
               <strong>Asia Pacific College</strong>
               <p>Computer Science</p>
