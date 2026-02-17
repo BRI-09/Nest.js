@@ -93,8 +93,7 @@ export default function GuestbookPage() {
         <h1 className={styles.title}>Guestbook</h1>
         <p className={styles.sub}>
           Leave a message, say hi, or share a thought. All entries are stored in
-          <strong> Supabase</strong> via the <code>NestJS REST API</code>.
-        </p>
+       </p>
       </div>
 
       {/* ── SIGN FORM ── */}
@@ -131,7 +130,7 @@ export default function GuestbookPage() {
           <div className="field">
             <label>Message</label>
             <textarea
-              rows={3} placeholder="Say something nice… or funny 🐱"
+              rows={3} placeholder="Say something nice… or anything 🐱"
               value={form.message} required minLength={3} maxLength={500}
               onChange={e => setForm(p => ({ ...p, message: e.target.value }))}
               disabled={submitting}

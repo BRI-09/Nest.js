@@ -21,8 +21,8 @@ export default function About() {
         <article className="card col-4 fade-in">
           <div className="card-header">Me & My Goals</div>
           <div className="card-body">
-            <div className="bullet"><span className="dot"/><div>Curious CS student at Asia Pacific College who loves turning ideas into interactive experiences, coding, and caffeinated problem-solving — with a soft spot for cats. 🐱</div></div>
-            <div className="bullet"><span className="dot"/><div>Goals: Own a fat cat. Land a job that supports me and said cat. Build an app to help stray cats &amp; dogs find loving homes. 🐾</div></div>
+            <div className="bullet"><span className="dot"/><div>Curious CS Specialize in Cybersecurity and Forensic student at Asia Pacific College who loves turning ideas into interactive experiences, coding, and caffeinated problem-solving — with a soft spot for cats. 🐱</div></div>
+            <div className="bullet"><span className="dot"/><div>Goals: Own a fat cat. Land a job that supports me and my feline; Build an app to help stray cats &amp; dogs find loving homes. 🐾</div></div>
           </div>
         </article>
         <article className="card col-4 fade-in" style={{animationDelay:'0.08s'}}>
