@@ -27,11 +27,11 @@ export default function Contact() {
       <div className={styles.layout}>
         <div className={styles.info}>
           <p style={{color:'var(--text-muted)',lineHeight:1.7}}>
-            Got a project, a question, or just want to say hi? Drop me a message — I read every one. 🐱
+            Got a project, a question, or just want to say hi? Drop me a message — I read each one of your messages. 🐱
           </p>
           <div className={styles.detail}><span>📧</span><a href="mailto:bpananayo@student.apc.edu.ph">bpananayo@student.apc.edu.ph</a></div>
           <div className={styles.detail}><span>🏫</span><span>Asia Pacific College, Philippines</span></div>
-          <div className={styles.apiTag}><code>POST /api/contact</code></div>
+          <div className={styles.detail}><span>🤖</span><span>Used Ai For Structures and Other Parts</span></div>
         </div>
 
         <form className={styles.form} onSubmit={onSubmit} noValidate>

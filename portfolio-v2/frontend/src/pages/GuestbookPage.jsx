@@ -92,7 +92,7 @@ export default function GuestbookPage() {
       <div className={styles.header}>
         <h1 className={styles.title}>Guestbook</h1>
         <p className={styles.sub}>
-          Leave a message, say hi, or share a thought. All entries are stored in
+          Leave a message, say hi, or share a thought.
        </p>
       </div>
 
@@ -223,7 +223,7 @@ export default function GuestbookPage() {
                 </>
               )}
             </article>
-          ))}
+        ))}
         </div>
       </section>
 
