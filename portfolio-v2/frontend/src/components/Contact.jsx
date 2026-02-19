@@ -31,6 +31,7 @@ export default function Contact() {
           </p>
           <div className={styles.detail}><span>📧</span><a href="mailto:bpananayo@student.apc.edu.ph">bpananayo@student.apc.edu.ph</a></div>
           <div className={styles.detail}><span>🏫</span><span>Asia Pacific College, Philippines</span></div>
+          <div className={styles.detail}><span>👾</span><span>Play with me COD:"6976169537657896961"</span></div>
           <div className={styles.detail}><span>🤖</span><span>Used Ai For Structures and Other Parts</span></div>
         </div>
 
