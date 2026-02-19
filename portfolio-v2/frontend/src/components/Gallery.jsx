@@ -39,9 +39,18 @@ export default function Gallery() {
               <div className={styles.track} style={{transform:`translateX(-${cur*100}%)`}}>
                 {images.map(img => (
                   <figure key={img.id} className={styles.slide}>
+                  {img.type === 'video' ? (
+                    <video 
+                      src={img.src} 
+                      controls 
+                      autoPlay  
+                      loop
+                      className={styles.video}
+                    />
+                  ) : (
                     <img src={img.src} alt={img.alt} loading="lazy" />
-                    <figcaption className={styles.caption}>{img.title}</figcaption>
-                  </figure>
+                  )}
+                </figure>
                 ))}
               </div>
               <button className={`${styles.arr} ${styles.prev}`} onClick={()=>go(cur-1)}>‹</button>
