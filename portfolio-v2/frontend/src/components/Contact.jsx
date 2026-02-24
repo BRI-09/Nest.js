@@ -27,7 +27,7 @@ export default function Contact() {
       <div className={styles.layout}>
         <div className={styles.info}>
           <p style={{color:'var(--text-muted)',lineHeight:1.7}}>
-            Got a project, a question, want to play together?, or just want to say hi? Drop me a message. I read each all of your messages. 🐱
+            Got a project, a question, want to play together in COD, or just want to say hi? Drop me a message. I read each all of your messages. 🐱
           </p>
           <div className={styles.detail}><span>📧</span><a href="mailto:bpananayo@student.apc.edu.ph">bpananayo@student.apc.edu.ph</a></div>
           <div className={styles.detail}><span>🏫</span><span>Asia Pacific College, Philippines</span></div>
