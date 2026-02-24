@@ -27,11 +27,11 @@ export default function Contact() {
       <div className={styles.layout}>
         <div className={styles.info}>
           <p style={{color:'var(--text-muted)',lineHeight:1.7}}>
-            Got a project, a question, or just want to say hi? Drop me a message — I read each one of your messages. 🐱
+            Got a project, a question, want to play together?, or just want to say hi? Drop me a message. I read each all of your messages. 🐱
           </p>
           <div className={styles.detail}><span>📧</span><a href="mailto:bpananayo@student.apc.edu.ph">bpananayo@student.apc.edu.ph</a></div>
           <div className={styles.detail}><span>🏫</span><span>Asia Pacific College, Philippines</span></div>
-          <div className={styles.detail}><span>👾</span><span>Play with me COD:"6976169537657896961"</span></div>
+          <div className={styles.detail}><span>👾</span><span>6976169537657896961</span></div>
           <div className={styles.detail}><span>🤖</span><span>Used Ai For Structures and Other Parts</span></div>
         </div>
 
