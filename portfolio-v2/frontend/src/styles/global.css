@@ -11,14 +11,14 @@
   --text-muted:   #c8b9e6;
   --text-dim:     #9d8ec4;
 
-  --rose:         #8b5cf6;   /* primary purple */
+  --rose:         #bc79ff;   /* primary purple */
   --rose-dark:    #6d28d9;
   --rose-glow:    rgba(139,92,246,0.35);
   --accent:       #e9defa;
   --accent-strong:#fff7fe;
 
   --grad-a:       #4b2e83;
-  --grad-b:       #7a4cd6;
+  --grad-b:       #8d54d2;
 
   --card:         rgba(255,255,255,0.05);
   --shadow:       0 8px 32px rgba(0,0,0,0.5);
