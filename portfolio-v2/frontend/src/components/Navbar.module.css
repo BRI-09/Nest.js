@@ -1,8 +1,9 @@
 .nav {
   position: sticky; top: 0; z-index: 100;
-  background: rgba(19,13,34,0.88);
+  background: var(--bg-panel);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border);
+  transition: background 0.3s ease;
 }
 
 .inner {
@@ -20,8 +21,9 @@
   font-weight: 900; font-size: 20px;
   color: var(--accent-strong);
   letter-spacing: -0.01em;
+  transition: color 0.3s ease;
 }
-.logo span { color: var(--rose); }
+.logo span { color: var(--rose); transition: color 0.3s ease; }
 
 .links {
   list-style: none;
@@ -34,19 +36,22 @@
   border-radius: var(--radius-sm);
   font-size: 13px; font-weight: 600;
   color: var(--text-muted);
-  transition: color 0.2s ease, background 0.2s ease;
+  transition: color 0.3s ease, background 0.3s ease;
 }
-.links a:hover { color: var(--text); background: rgba(255,255,255,0.05); }
+.links a:hover { 
+  color: var(--text); 
+  background: var(--card);
+}
 
 .active { color: var(--accent-strong) !important; }
 
 .gbLink {
-  background: rgba(139,92,246,0.1) !important;
-  border: 1px solid rgba(139,92,246,0.3) !important;
+  background: rgba(139,92,246,0.15) !important;
+  border: 1px solid rgba(139,92,246,0.35) !important;
   color: var(--rose) !important;
 }
-.gbLink:hover { background: rgba(139,92,246,0.2) !important; }
-.gbLink.active { background: rgba(139,92,246,0.2) !important; }
+.gbLink:hover { background: rgba(139,92,246,0.25) !important; }
+.gbLink.active { background: rgba(139,92,246,0.25) !important; }
 
 @media (max-width: 600px) {
   .links { gap: 2px; }

@@ -5,16 +5,24 @@
   background: radial-gradient(ellipse 120% 80% at 60% 20%, var(--grad-b), var(--grad-a) 55%, var(--bg-panel));
   border: 1px solid var(--border);
   overflow: hidden;
-  box-shadow: 0 40px 80px rgba(0,0,0,0.5);
+  box-shadow: var(--shadow-lg);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
 .orb1, .orb2 {
   position: absolute; border-radius: 50%;
   pointer-events: none; filter: blur(90px);
   animation: drift 9s ease-in-out infinite alternate;
+  transition: opacity 0.3s ease;
 }
 .orb1 { width: 360px; height: 360px; background: rgba(139,92,246,0.3); top: -80px; right: -60px; }
 .orb2 { width: 260px; height: 260px; background: rgba(109,40,217,0.2); bottom: -40px; left: -40px; animation-delay: -5s; }
+
+/* Light mode - reduce orb opacity */
+body[data-theme="light"] .orb1,
+body[data-theme="light"] .orb2 {
+  opacity: 0.4;
+}
 
 @keyframes drift {
   from { transform: translate(0,0) scale(1); }
@@ -43,10 +51,11 @@
   line-height: 0.92; letter-spacing: -0.03em;
   color: var(--accent-strong); margin-bottom: 20px;
   animation: fadeUp 0.55s ease both;
+  transition: color 0.3s ease;
 }
 .title em {
   font-style: italic;
-  background: linear-gradient(90deg, #d8b4fe, #fff7fe 60%);
+  background: linear-gradient(90deg, var(--rose), var(--rose-dark));
   -webkit-background-clip: text; -webkit-text-fill-color: transparent;
   background-clip: text;
 }
@@ -88,9 +97,7 @@
   animation: fadeUp 0.55s 0.1s ease both;
 }
 .frame {
-  width: 80%;
-  height: 280px;
-  aspect-ratio: unset;
+  width: 100%; aspect-ratio: 3/4;
   border-radius: var(--radius-md); overflow: hidden;
   border: 1px solid var(--border);
   background: var(--bg-panel);

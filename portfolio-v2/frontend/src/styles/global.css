@@ -35,29 +35,29 @@
 
 /* ─── LIGHT MODE (Pastel Purple) ─────────────────────── */
 body[data-theme="light"] {
-  --bg:           #f8f5ff;
-  --bg-deep:      #fdfbff;
-  --bg-panel:     #f3eeff;
-  --bg-card:      #f3eeff;
-  --border:       rgba(167,139,250,0.2);
-  --border-hover: rgba(139,92,246,0.5);
+  --bg:           #f0e6ff;        /* Light purple background */
+  --bg-deep:      #f5edff;        /* Slightly lighter purple */
+  --bg-panel:     #e6d5ff;        /* Medium light purple for navbar/cards */
+  --bg-card:      #ede0ff;        /* Light purple for cards */
+  --border:       rgba(139,92,246,0.3);
+  --border-hover: rgba(139,92,246,0.6);
 
-  --text:         #2d1b4e;
-  --text-muted:   #5a4373;
-  --text-dim:     #826b9c;
+  --text:         #1a0f2e;        /* Very dark purple - readable */
+  --text-muted:   #3d2259;        /* Dark purple for muted text */
+  --text-dim:     #5a3a7a;        /* Medium purple for dim text */
 
-  --rose:         #9f7aea;   /* pastel purple */
-  --rose-dark:    #805ad5;
-  --rose-glow:    rgba(159,122,234,0.3);
-  --accent:       #2d1b4e;
-  --accent-strong:#1a0f2e;
+  --rose:         #8b5cf6;        /* Vibrant purple for buttons */
+  --rose-dark:    #6d28d9;
+  --rose-glow:    rgba(139,92,246,0.3);
+  --accent:       #1a0f2e;        /* Dark purple for main text */
+  --accent-strong:#0d0518;        /* Almost black for big headings like "Ananayo" */
 
-  --grad-a:       #e9d8fd;
-  --grad-b:       #d6bcfa;
+  --grad-a:       #d6bcfa;        /* Light purple gradient */
+  --grad-b:       #c4a7f5;        /* Slightly darker light purple */
 
-  --card:         rgba(167,139,250,0.08);
-  --shadow:       0 8px 32px rgba(139,92,246,0.12);
-  --shadow-lg:    0 24px 64px rgba(139,92,246,0.18);
+  --card:         rgba(139,92,246,0.12);
+  --shadow:       0 8px 32px rgba(139,92,246,0.15);
+  --shadow-lg:    0 24px 64px rgba(139,92,246,0.2);
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -135,7 +135,7 @@ button { font-family: inherit; cursor: pointer; }
   text-transform: uppercase;
   color: var(--rose);
   border-bottom: 1px solid var(--border);
-  background: rgba(165, 126, 255, 0.06);
+  background: rgba(139,92,246,0.06);
 }
 .card-body { padding: 18px; }
 .card-body p { color: var(--text-muted); margin: 0 0 8px; }
