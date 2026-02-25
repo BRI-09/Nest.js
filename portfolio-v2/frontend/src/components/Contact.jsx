@@ -32,7 +32,7 @@ export default function Contact() {
           <div className={styles.detail}><span>📧</span><a href="mailto:bpananayo@student.apc.edu.ph">bpananayo@student.apc.edu.ph</a></div>
           <div className={styles.detail}><span>🏫</span><span>Asia Pacific College, Philippines</span></div>
           <div className={styles.detail}><span>👾</span><span>6976169537657896961</span></div>
-          <div className={styles.detail}><span>🤖</span><span>Used Ai For Structures and Other Parts</span></div>
+          <div className={styles.detail}><span>🤖</span><span>Used Ai For Structures and Other Parts [link:https://claude.ai/share/4e674dc3-a39b-4ad5-b9de-df84c6670c5f]</span></div>
         </div>
 
         <form className={styles.form} onSubmit={onSubmit} noValidate>
